@@ -15,5 +15,5 @@ export class CreatePostDTO {
   @IsString()
   @IsNotEmpty()
   @ApiProperty()
-  iamge_url: string;
+  image_url: string;
 }

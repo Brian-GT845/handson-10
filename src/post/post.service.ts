@@ -1,11 +1,12 @@
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
 import { Posts } from './post.entity';
+import { Repository } from 'typeorm';
 
 export class PostService {
   constructor(
     @InjectRepository(Posts) private postRepository: Repository<Posts>,
   ) {}
+
   async save(user: Posts): Promise<Posts> {
     return this.postRepository.save(user);
   }
